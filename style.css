@@ -27,6 +27,9 @@ body {
     text-align: center;
 
     padding: 40px 0 40px 0;
+
+    width: 100%;
+    height: 100%;
 }
 
 .wrapper-black {
@@ -48,6 +51,7 @@ body {
 }
 
 .wrapper_card {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -79,6 +83,8 @@ body {
     font-size: 14px;
     line-height: 179%;
     text-transform: lowercase;
+
+    max-width: 700px;
 }
 
 .wrapper_link {
@@ -259,6 +265,60 @@ body {
     min-height: 550px;
 }
 
+/* ------   TAB ------ */
+
+.tab_img {
+    background-size: cover;
+    background-position: center center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.tab_img-1 {
+    background-image: url(img/tab1.jpeg);
+}
+
+.tab_img-2 {
+    background-image: url(img/tab2.jpg);
+}
+
+.tab_img-3 {
+    background-image: url(img/tab3.jpg);
+}
+
+.tab .wrapper_card {
+    min-height: 767px;
+}
+
+.tab .wrapper_card .tab_img {
+    max-width: 940px;
+    min-height: 627px;
+}
+
+.tab_buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    gap: 16px;
+}
+
+.tab_button {
+    border-radius: 4px;
+    padding: 1px 30px;
+
+    color: #fff;
+    background-color:  #92a0ad;
+
+    text-transform: uppercase;
+}
+
+.open {
+    background-color: #2e80b6;
+}
+
 /* ------ MEDIA ------ */
 
 @media (max-width: 400px) {
@@ -273,6 +333,11 @@ body {
     .wrapper_cards {
         flex-wrap: wrap;
     }
+
+    .tab_buttons {
+        flex-wrap: wrap;
+    }
+    
 }
 
 @media (max-width: 450px) {
