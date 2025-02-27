@@ -25,6 +25,8 @@ body {
     gap: 60px;
 
     text-align: center;
+
+    padding: 40px 0 40px 0;
 }
 
 .wrapper-black {
@@ -37,12 +39,19 @@ body {
     align-items: center;
     justify-content: center;
     gap: 40px;
+}
 
-    /* flex-wrap: wrap; */
+.wrapper_name {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 }
 
 .wrapper_card {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .wrapper_title {
@@ -50,7 +59,6 @@ body {
     line-height: 120%;
     letter-spacing: 0.17em;
     text-transform: uppercase;
-    color: #676770;
 }
 
 .wrapper_subtitle {
@@ -58,7 +66,6 @@ body {
     line-height: 118%;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: #8e8e9c;
 }
 
 .wrapper_h4 {
@@ -66,15 +73,50 @@ body {
     line-height: 150%;
     letter-spacing: 0.35em;
     text-transform: uppercase;
-    color: #676770;
 }
 
 .wrapper_p {
     font-size: 14px;
     line-height: 179%;
-    color: #6a859c;
     text-transform: lowercase;
 }
+
+.wrapper_link {
+    padding: 11px 30px;
+
+    font-size: 16px;
+    line-height: 131%;
+    letter-spacing: 0.12em;
+
+    color: #fff;
+
+    border: 1px solid #fff;
+    border-radius: 4px;
+
+    text-transform: uppercase;
+}
+
+
+.white .wrapper_title {
+    color: #676770;
+}
+
+.white .wrapper_subtitle {
+    color: #8e8e9c;
+}
+
+.white .wrapper_h4 {
+    color: #676770;
+}
+
+.white .wrapper_p {
+    color: #6a859c;
+}
+
+.black {
+    color: #fff;
+}
+
 
 /* ------ HEADER ------ */
 
@@ -116,6 +158,14 @@ body {
     gap: 40px;
 
     text-transform: capitalize;
+}
+
+.header_link {
+    color: #676770;
+}
+
+.header_link:hover {
+    color: #0082f3;
 }
 
 /* ------ WELCOME ------ */
@@ -171,30 +221,12 @@ body {
     flex-wrap: wrap;
 }
 
-.welcome_link {
-    padding: 11px 30px;
-
-    font-size: 16px;
-    line-height: 131%;
-    letter-spacing: 0.12em;
-
-    color: #fff;
-
-    border: 1px solid #fff;
-    border-radius: 4px;
-
-}
-
-.welcome_link:hover {
+.welcome .wrapper_link:hover {
     background-color: #69b9ff;
     border: 1px solid #69b9ff;
 }
 
 /* ------ ABOUT ------ */
-
-.about {
-    padding: 40px;
-}
 
 .about .wrapper_card {
     border: 1px solid #dcebf7;
@@ -211,6 +243,21 @@ body {
     gap: 16px;
 }
 
+/* ------ SERVICES ------ */
+
+.services {
+    background-color: #192024;
+}
+
+.services .wrapper_card img{
+    max-width: 430px;
+    min-height: 287px;
+}
+
+.services .wrapper_card {
+    max-width: 460px;
+    min-height: 550px;
+}
 
 /* ------ MEDIA ------ */
 
@@ -228,8 +275,21 @@ body {
     }
 }
 
+@media (max-width: 450px) {
+    .services .wrapper_card img{
+        max-width: 300px;
+        min-height: 200px;
+    }
+    
+    .services .wrapper_card {
+        max-width: 460px;
+        min-height: 550px;
+    }
+}
+
 @media (max-width: 1000px) {
     .wrapper_cards {
         flex-wrap: wrap;
     }
 }
+
